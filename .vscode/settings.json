@@ -1,0 +1,46 @@
+{
+    "editor.fontSize": 16,
+    "editor.mouseWheelZoom": true,
+    "editor.multiCursorModifier": "alt",  // Other options: "ctrlCmd"
+    // The number of spaces a tab is equal to.
+    "editor.tabSize": 4,
+    // Insert spaces when pressing Tab.
+    "editor.insertSpaces": true,
+    // When opening a file, `editor.tabSize` and `editor.insertSpaces` will be detected based on the file contents.
+    "editor.detectIndentation": true,
+
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,  // "files.autoSave" must be "afterDelay"
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+
+    "git.branchProtection": ["master", "main", "stable"],
+    "git.terminalGitEditor": false,
+
+    "go.lintOnSave": "file",
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+
+    "openapi.tryit.insecureSslHostnames": [
+        "localhost"
+    ], // "window.autoDetectColorScheme" must be enabled
+
+    "window.autoDetectColorScheme": true,
+    "workbench.tree.indent": 25,
+    "workbench.colorTheme": "Solarized Dark",  // "window.autoDetectColorScheme" must be enabled
+    "workbench.preferredDarkColorTheme": "Solarized Dark",
+    "window.zoomLevel": 0,
+
+    "yaml.schemas": {
+        "url": "globPattern",
+        "Kubernetes": "globPattern"
+        // "kubernetes": "*.yaml"
+    }
+}
