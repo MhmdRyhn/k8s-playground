@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-app-deployment
+  labels:
+    app: sample-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sample-app
+  template:
+    metadata:
+      labels:
+        app: sample-app
+    spec:
+      containers:
+        - name: consul-container
+          image: bitnami/consul:latest
+          imagePullPolicy: Never
+          env:
+            - name: CONSUL_ENABLE_UI
+              value: "true"
+          ports:
+            - containerPort: 8300
+            - containerPort: 8301
+            - containerPort: 8500
+            - containerPort: 8600
+        - name: sample-app-container
+          image: sample-app:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 2021
